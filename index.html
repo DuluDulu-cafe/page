@@ -3,7 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DU LU DU LU - COFFEE </title>
+    
+    <!-- === 標準 SEO 優化 標籤 === -->
+    <title>DU LU DU LU - COFFEE | 最懂你的職場日常，辦公室精選濾掛與精品單品咖啡豆</title>
+    <meta name="description" content="最屬於你辦公室的咖啡，接住你的疲憊，點亮你的靈感。DU LU DU LU COFFEE 提供專員級職員系列濾掛咖啡、精選單品主管系列咖啡豆，為緊湊的職場商務節奏注入溫度與滿滿續航力。">
+    <meta name="keywords" content="DU LU DU LU, COFFEE, 辦公室咖啡, 濾掛咖啡, 掛耳包, 精品咖啡豆, 單品咖啡, 職場咖啡, 咖啡豆推薦, 衣索比亞 耶加雪菲">
+    <meta name="author" content="DU LU DU LU COFFEE">
+    <meta name="robots" content="index, follow">
+    
+    <!-- === Open Graph 社群分享優化標籤 (LINE / Facebook) === -->
+    <meta property="og:title" content="DU LU DU LU - COFFEE | 最屬於你辦公室的咖啡">
+    <meta property="og:description" content="最屬於你辦公室的咖啡，接住你的疲憊，點亮你的靈感。用一杯咖啡的溫度，成為最懂你的職場日常。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="LOGO.png"> <!-- 這裡建議可放一張 1200x630 的品牌或產品形象圖 -->
+    <meta property="og:site_name" content="DU LU DU LU COFFEE">
+    
+    <!-- 動態產生 GitHub 預設網址的 Canonical 與 OG URL 標籤 -->
+    <script>
+        const currentUrl = window.location.href.split('?')[0].split('#')[0];
+        
+        const canonicalLink = document.createElement('link');
+        canonicalLink.rel = 'canonical';
+        canonicalLink.href = currentUrl;
+        document.head.appendChild(canonicalLink);
+        
+        const ogUrlMeta = document.createElement('meta');
+        ogUrlMeta.setAttribute('property', 'og:url');
+        ogUrlMeta.content = currentUrl;
+        document.head.appendChild(ogUrlMeta);
+    </script>
+
     <style>
         :root {
             --primary-color: #2b221a;
@@ -619,7 +648,7 @@
 
             <div class="product-card" onclick="openProductModal('004.png', '專注', 'Focus', '別貪心，這杯咖啡的時間只夠做好一件事。', '中深焙', '衣索比亞/印度', '古優原生種/羅布斯塔', '日曬/水洗', ['紅茶香', '烤堅果', '黑麥汁'], ['體驗組 (5入)：$150', '分享經濟組 (25入)：$650', '標準裝 (1磅)：$500', '雙磅特惠組 (2磅)：$980'], 'filter-專注')">
                 <div class="image-container">
-                    <span class="badge-roast">中深焙</span>
+                    <span class="badge-roast">Con-depth</span>
                     <img src="004.png" class="product-img" alt="專注">
                 </div>
                 <div class="product-info">
@@ -686,10 +715,10 @@
     <div id="tab-premium" class="tab-content">
         <div class="product-grid">
             
-            <div class="product-card" onclick="openProductModal('011.png', '羚羊', 'Antelope', '來自衣索比亞耶加雪菲的極致單品，展現厭氧日曬的獨特風味。', '淺烘焙', '衣索比亞 / 耶加雪菲', 'Heirloom 古優原生種', '厭氧日曬', ['黑莓', '水果酒', '莓果', '醃梅子', '鳳梨'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-羚羊')">
+            <div class="product-card" onclick="openProductModal('011.jpg', '羚羊', 'Antelope', '來自衣索比亞耶加雪菲的極致單品，展現厭氧日曬的獨特風味。', '淺烘焙', '衣索比亞 / 耶加雪菲', 'Heirloom 古優原生種', '厭氧日曬', ['黑莓', '水果酒', '莓果', '醃梅子', '鳳梨'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-羚羊')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
-                    <img src="011.png" class="product-img" alt="羚羊">
+                    <img src="011.jpg" class="product-img" alt="羚羊">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
@@ -707,10 +736,10 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('012.png', '斑馬', 'Zebra', '來自衣索比亞西達瑪的極致單品，展現水洗的獨特風味。', '淺烘焙', '衣索比亞 / 西達瑪', 'Heirloom 古優原生種', '水洗', ['柑橘', '紅莓果', '黃檸檬', '檸檬卡士達'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-斑馬')">
+            <div class="product-card" onclick="openProductModal('012.jpg', '斑馬', 'Zebra', '來自衣索比亞西達瑪的極致單品，展現水洗的獨特風味。', '淺烘焙', '衣索比亞 / 西達瑪', 'Heirloom 古優原生種', '水洗', ['柑橘', '紅莓果', '黃檸檬', '檸檬卡士達'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-斑馬')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
-                    <img src="012.png" class="product-img" alt="斑馬">
+                    <img src="012.jpg" class="product-img" alt="斑馬">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
@@ -728,10 +757,10 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('013.png', '駝鹿', 'Moose', '來自哥倫比亞娜玲瓏省的極致單品，展現水洗的獨特風味。', '中烘焙', '哥倫比亞 / 娜玲瓏省', 'Caturra 卡杜拉', '水洗', ['烤堅果', '紅糖', '巧克力', '奶油', '烏龍茶'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-駝鹿')">
+            <div class="product-card" onclick="openProductModal('013.jpg', '駝鹿', 'Moose', '來自哥倫比亞娜玲瓏省的極致單品，展現水洗的獨特風味。', '中烘焙', '哥倫比亞 / 娜玲瓏省', 'Caturra 卡杜拉', '水洗', ['烤堅果', '紅糖', '巧克力', '奶油', '烏龍茶'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-駝鹿')">
                 <div class="image-container">
                     <span class="badge-roast">中烘焙</span>
-                    <img src="013.png" class="product-img" alt="駝鹿">
+                    <img src="013.jpg" class="product-img" alt="駝鹿">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
@@ -749,10 +778,10 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('014.png', '胡狼', 'Jackal', '來自衣索比亞古吉產區的極致單品，展現紅蜜處理法的獨特風味。', '淺烘焙', '衣索比亞 / 古吉產區', 'Heirloom 古優原生種', '紅蜜處理法', ['水蜜桃', '佛手柑', '蜂蜜', '荔枝軟糖'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-胡狼')">
+            <div class="product-card" onclick="openProductModal('014.jpg', '胡狼', 'Jackal', '來自衣索比亞古吉產區的極致單品，展現紅蜜處理法的獨特風味。', '淺烘焙', '衣索比亞 / 古吉產區', 'Heirloom 古優原生種', '紅蜜處理法', ['水蜜桃', '佛手柑', '蜂蜜', '荔枝軟糖'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-胡狼')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
-                    <img src="014.png" class="product-img" alt="胡狼">
+                    <img src="014.jpg" class="product-img" alt="胡狼">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
@@ -770,10 +799,10 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('015.png', '夜獅', 'Night Lion', '來自衣索比亞古吉產區的極致單品，展現水洗處理法的獨特風味。', '淺烘焙', '衣索比亞 / 古吉產區', 'Heirloom 古優原生種', '水洗處理法', ['紫羅蘭', '莓果', '蔗糖', '桃子'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-夜獅')">
+            <div class="product-card" onclick="openProductModal('015.jpg', '夜獅', 'Night Lion', '來自衣索比亞古吉產區的極致單品，展現水洗處理法的獨特風味。', '淺烘焙', '衣索比亞 / 古吉產區', 'Heirloom 古優原生種', '水洗處理法', ['紫羅蘭', '莓果', '蔗糖', '桃子'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-夜獅')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
-                    <img src="015.png" class="product-img" alt="夜獅">
+                    <img src="015.jpg" class="product-img" alt="夜獅">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
@@ -791,10 +820,10 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('016.png', '雲豹', 'Clouded Leopard', '來自泰國清萊產區的極致單品，展現雙重厭氧蜜處理法的獨特風味。', '淺中烘焙', '泰國 / 清萊產區', 'Catimor 卡提摩', '雙重厭氧蜜處理法', ['泰奶', '椰子', '水蜜桃', '香料'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-雲豹')">
+            <div class="product-card" onclick="openProductModal('016.jpg', '雲豹', 'Clouded Leopard', '來自泰國清萊產區的極致單品，展現雙重厭氧蜜處理法的獨特風味。', '淺中烘焙', '泰國 / 清萊產區', 'Catimor 卡提摩', '雙重厭氧蜜處理法', ['泰奶', '椰子', '水蜜桃', '香料'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-雲豹')">
                 <div class="image-container">
                     <span class="badge-roast">淺中烘焙</span>
-                    <img src="016.png" class="product-img" alt="雲豹">
+                    <img src="016.jpg" class="product-img" alt="雲豹">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
@@ -812,10 +841,10 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('017.png', '露易莎莊園', 'Louisa Estate', '來自哥倫比亞安蒂奧基亞省的極致單品，展現水果蜜處理的獨特風味。', '淺烘焙', '哥倫比亞 / 安蒂奧基亞省', 'Caturra 卡杜拉', '水果蜜處理', ['草莓果醬', '紅莓硬糖', '烤堅果', '紅茶'], ['單入體驗掛耳：$80', '精品半磅裝 (225g)：$700', '精品一磅裝 (455g)：$1380'], 'filter-露易莎莊園')">
+            <div class="product-card" onclick="openProductModal('017.jpg', '露易莎莊園', 'Louisa Estate', '來自哥倫比亞安蒂奧基亞省的極致單品，展現水果蜜處理的獨特風味。', '淺烘焙', '哥倫比亞 / 安蒂奧基亞省', 'Caturra 卡杜拉', '水果蜜處理', ['草莓果醬', '紅莓硬糖', '烤堅果', '紅茶'], ['單入體驗掛耳：$80', '精品半磅裝 (225g)：$700', '精品一磅裝 (455g)：$1380'], 'filter-露易莎莊園')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
-                    <img src="017.png" class="product-img" alt="露易莎莊園">
+                    <img src="017.jpg" class="product-img" alt="露易莎莊園">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
@@ -833,10 +862,10 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('018.png', '雲霧茉莉', 'Cloud Jasmine', '來自哥倫比亞薇拉省的極致單品，展現厭氧水洗的獨特風味。', '淺烘焙', '哥倫比亞 / 薇拉省', 'Typica 鐵比卡', '厭氧水洗', ['茉莉花', '白毫銀針', '奶油香', '玉蘭花'], ['單入體驗掛耳：$80', '精品半磅裝 (225g)：$700', '精品一磅裝 (455g)：$1380'], 'filter-雲霧茉莉')">
+            <div class="product-card" onclick="openProductModal('018.jpg', '雲霧茉莉', 'Cloud Jasmine', '來自哥倫比亞薇拉省的極致單品，展現厭氧水洗的獨特風味。', '淺烘焙', '哥倫比亞 / 薇拉省', 'Typica 鐵比卡', '厭氧水洗', ['茉莉花', '白毫銀針', '奶油香', '玉蘭花'], ['單入體驗掛耳：$80', '精品半磅裝 (225g)：$700', '精品一磅裝 (455g)：$1380'], 'filter-雲霧茉莉')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
-                    <img src="018.png" class="product-img" alt="雲霧茉莉">
+                    <img src="018.jpg" class="product-img" alt="雲霧茉莉">
                 </div>
                 <div class="product-info">
                     <div class="product-info-top">
