@@ -15,7 +15,7 @@
     <meta property="og:title" content="DU LU DU LU - COFFEE | 最屬於你辦公室的咖啡">
     <meta property="og:description" content="最屬於你辦公室的咖啡，接住你的疲憊，點亮你的靈感。用一杯咖啡的溫度，成為最懂你的職場日常。">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="LOGO.png"> <!-- 這裡建議可放一張 1200x630 的品牌或產品形象圖 -->
+    <meta property="og:image" content="LOGO.png">
     <meta property="og:site_name" content="DU LU DU LU COFFEE">
     
     <!-- 動態產生 GitHub 預設網址的 Canonical 與 OG URL 標籤 -->
@@ -58,7 +58,8 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.4;
-            padding-bottom: 60px;
+            /* === 修正：預留底部懸浮條的安全高度，避免最後一張卡片被遮擋 === */
+            padding-bottom: 75px; 
         }
 
         /* 頂部 Header 區塊 */
@@ -106,11 +107,19 @@
             background-color: #e0dad3;
         }
 
-        /* 頁籤導覽列 */
+        /* 頁籤導覽外容器（滿版實色擋板，防止文字穿透） */
         .tabs-container {
+            position: sticky;
+            top: 53px; 
+            z-index: 99;
+            background-color: var(--bg-color); 
+            padding: 8px 12px; 
+        }
+
+        /* 頁籤內部的膠囊外殼 */
+        .tabs-inner {
             display: flex;
             background-color: var(--card-bg);
-            margin: 12px 12px 12px 12px;
             padding: 4px;
             border-radius: 30px;
             box-shadow: var(--shadow-sm);
@@ -119,7 +128,7 @@
             scrollbar-width: none;
         }
 
-        .tabs-container::-webkit-scrollbar {
+        .tabs-inner::-webkit-scrollbar {
             display: none;
         }
 
@@ -298,6 +307,56 @@
             }
         }
 
+        /* === 新增：底部固定懸浮資訊條樣式 === */
+        .bottom-sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85); /* 半透明暖白底 */
+            backdrop-filter: blur(8px); /* 質感磨砂玻璃效果 */
+            -webkit-backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(43, 34, 26, 0.08); /* 細緻頂邊線 */
+            padding: 10px 16px;
+            z-index: 500; /* 確保在產品列表之上，但低於 Modal 彈窗 */
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            justify-content: center;
+            box-shadow: 0 -4px 16px rgba(43, 34, 26, 0.04);
+        }
+
+        .sticky-bar-item {
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-main);
+            line-height: 1.3;
+            letter-spacing: 0.2px;
+        }
+
+        /* 前置時尚小圖標 */
+        .sticky-bar-item::before {
+            content: "✦";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 6px;
+            font-size: 10px;
+        }
+
+        /* 針對桌機/大螢幕改為優雅的單行橫向排版 */
+        @media (min-width: 576px) {
+            .bottom-sticky-bar {
+                flex-direction: row;
+                justify-content: center;
+                gap: 32px;
+                padding: 12px 24px;
+            }
+            .sticky-bar-item {
+                font-size: 12px;
+            }
+        }
+
         /* 彈窗樣式 (Modal) */
         .modal-overlay {
             position: fixed;
@@ -451,6 +510,7 @@
         .contact-info-item {
             margin-bottom: 8px;
             font-size: 0.95rem;
+            text-align: left;
         }
 
         .contact-label {
@@ -576,13 +636,14 @@
     </header>
 
     <div class="tabs-container">
-        <button class="tab-button active" onclick="switchTab('tab-drip')">職員系列濾掛</button>
-        <button class="tab-button" onclick="switchTab('tab-premium')">單品主管系列</button>
+        <div class="tabs-inner">
+            <button class="tab-button active" onclick="switchTab('tab-drip')">經典職員系列</button>
+            <button class="tab-button" onclick="switchTab('tab-premium')">單品主管系列</button>
+        </div>
     </div>
 
     <div id="tab-drip" class="tab-content active">
         <div class="product-grid">
-            
             <div class="product-card" onclick="openProductModal('./001.png', '靈感', 'inspiration', '別問我，我只是一杯咖啡。', '淺焙', '衣索比亞 / 哥聯比亞', '古優原生種/帝比卡', '厭氧日曬 / 蜜處理', ['覆盆莓', '藍莓', '酒釀櫻桃', '柳橙'], ['體驗組 (5入)：$200', '分享經濟組 (25入)：$750', '標準裝 (1磅)：$650', '雙磅特惠組 (2磅)：$1200'], 'filter-靈感')">
                 <div class="image-container">
                     <span class="badge-roast">淺焙</span>
@@ -646,7 +707,7 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('004.png', '專注', 'Focus', '別貪心，這杯咖啡的時間只夠做好一件事。', '中深焙', '衣索比亞/印度', '古優原生種/羅布斯塔', '日曬/水洗', ['紅茶香', '烤堅果', '黑麥汁'], ['體驗組 (5入)：$150', '分享經濟組 (25入)：$650', '標準裝 (1磅)：$500', '雙磅特惠組 (2磅)：$980'], 'filter-專注')">
+            <div class="product-card" onclick="openProductModal('004.png', '專注', 'Focus', '別貪心，這杯咖啡的時間只夠做好一件事。', '心中焙', '衣索比亞/印度', '古優原生種/羅布斯塔', '日曬/水洗', ['紅茶香', '烤堅果', '黑麥汁'], ['體驗組 (5入)：$150', '分享經濟組 (25入)：$650', '標準裝 (1磅)：$500', '雙磅特惠組 (2磅)：$980'], 'filter-專注')">
                 <div class="image-container">
                     <span class="badge-roast">中深焙</span>
                     <img src="004.png" class="product-img" alt="專注">
@@ -832,7 +893,7 @@
                             <span class="product-name">雲豹</span>
                             <span class="product-english">Clouded Leopard</span>
                         </div>
-                        <p class="product-slogan">風味：泰奶、椰子', '水蜜桃', '香料</p>
+                        <p class="product-slogan">風味：泰奶、椰子、水蜜桃、香料</p>
                     </div>
                     <div class="product-footer">
                         <div class="price-row"><span class="price-type">掛耳 :</span> 60(1入)</div>
@@ -853,7 +914,7 @@
                             <span class="product-name">露易莎莊園</span>
                             <span class="product-english">Louisa Estate</span>
                         </div>
-                        <p class="product-slogan">風味：草莓果醬防、紅莓硬糖、紅茶</p>
+                        <p class="product-slogan">風味：草莓果醬、紅莓硬糖、紅茶</p>
                     </div>
                     <div class="product-footer">
                         <div class="price-row"><span class="price-type">掛耳 :</span> 80(1入)</div>
@@ -884,6 +945,12 @@
             </div>
 
         </div>
+    </div>
+
+    <!-- === 新增：懸浮在版面最底部的設計感資訊區塊 === -->
+    <div class="bottom-sticky-bar">
+        <div class="sticky-bar-item">本產品已投保國泰產物保險產品責任險</div>
+        <div class="sticky-bar-item">消費滿 1,000 元享免運費，未達門檻均收 100 元運費</div>
     </div>
 
 
