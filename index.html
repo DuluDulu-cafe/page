@@ -637,12 +637,81 @@
 
     <div class="tabs-container">
         <div class="tabs-inner">
-            <button class="tab-button active" onclick="switchTab('tab-drip')">經典專員系列</button>
+            <button class="tab-button active" onclick="switchTab('tab-midautumn')">中秋禮盒組</button>
+            <button class="tab-button" onclick="switchTab('tab-drip')">經典專員系列</button>
             <button class="tab-button" onclick="switchTab('tab-premium')">單品主管系列</button>
         </div>
     </div>
 
-    <div id="tab-drip" class="tab-content active">
+    <!-- 中秋禮盒組 (預設顯示第一個) -->
+    <div id="tab-midautumn" class="tab-content active">
+        <div class="product-grid">
+            
+            <!-- 列表資料一 -->
+            <div class="product-card" onclick="openProductModal('x01.png', '專員15入 經典濾掛咖啡禮盒組', 'Staff 15 Pack Gift Box', '經典專員系列陣容，精選多款風味。', '綜合烘焙', '精選產區綜合', '古優原生種/紅波旁等', '綜合處理法', ['靈感 x3', '正向 x3', '專注 x3', '放空 x3', '續航 x3'], ['禮盒優惠價：$450'], '')">
+                <div class="image-container">
+                    <span class="badge-roast">中秋限定</span>
+                    <img src="x01.png" class="product-img" alt="專員15入 經典濾掛咖啡禮盒組">
+                </div>
+                <div class="product-info">
+                    <div class="product-info-top">
+                        <span class="product-level">中秋禮盒</span>
+                        <div class="product-title-row">
+                            <span class="product-name">專員15入 經典濾掛咖啡禮盒組</span>
+                        </div>
+                        <p class="product-slogan">內容物 : 靈感x3、正向x3、專注x3、放空x3、續航x3</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="price-row"><span class="price-type">售價 :</span> $450</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 列表資料二 -->
+            <div class="product-card" onclick="openProductModal('x02.png', '團隊18入 精選濾掛咖啡禮盒組', 'Team 18 Pack Gift Box', '主管與專員跨界盛宴，滿足團隊多元口滋。', '綜合烘焙', '精選產區綜合', '多款精選風味', '綜合處理法', ['總監 x2', '經理 x3', '主任 x3', '靈感 x2', '正向 x2', '專注 x2', '放空 x2', '續航 x2'], ['禮盒優惠價：$760'], '')">
+                <div class="image-container">
+                    <span class="badge-roast">中秋限定</span>
+                    <img src="x02.png" class="product-img" alt="團隊18入 精選濾掛咖啡禮盒組">
+                </div>
+                <div class="product-info">
+                    <div class="product-info-top">
+                        <span class="product-level">中秋禮盒</span>
+                        <div class="product-title-row">
+                            <span class="product-name">團隊18入 精選濾掛咖啡禮盒組</span>
+                        </div>
+                        <p class="product-slogan">內容物 : 總監x2、經理x3、主任x3、靈感x2...</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="price-row"><span class="price-type">售價 :</span> $760</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 列表資料三 -->
+            <div class="product-card" onclick="openProductModal('x03.png', '高階24入 頂級濾掛咖啡禮盒組', 'Executive 24 Pack Gift Box', '單品主管頂級尊榮組合，極致層次體驗。', '精品烘焙', '單品精選產區', '頂級單品風味', '精選處理工藝', ['總監 x8', '經理 x8', '主任 x8'], ['禮盒優惠價：$1200'], '')">
+                <div class="image-container">
+                    <span class="badge-roast">中秋限定</span>
+                    <img src="x03.png" class="product-img" alt="高階24入 頂級濾掛咖啡禮盒組">
+                </div>
+                <div class="product-info">
+                    <div class="product-info-top">
+                        <span class="product-level">中秋禮盒</span>
+                        <div class="product-title-row">
+                            <span class="product-name">高階24入 頂級濾掛咖啡禮盒組</span>
+                        </div>
+                        <p class="product-slogan">內容物 : 總監x8、經理x8、主任x8</p>
+                    </div>
+                    <div class="product-footer">
+                        <div class="price-row"><span class="price-type">售價 :</span> $1200</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 經典專員系列 -->
+    <div id="tab-drip" class="tab-content">
         <div class="product-grid">
             <div class="product-card" onclick="openProductModal('./001.png', '靈感', 'inspiration', '別問我，我只是一杯咖啡。', '淺焙', '衣索比亞 / 哥聯比亞', '古優原生種/帝比卡', '厭氧日曬 / 蜜處理', ['覆盆莓', '藍莓', '酒釀櫻桃', '柳橙'], ['濾掛體驗組 (5入)：$200', '濾掛分享組 (25入)：$750', '標準裝 (1磅)：$650', '家庭號 (2磅)：$1200'], 'filter-靈感')">
                 <div class="image-container">
@@ -772,7 +841,7 @@
         </div>
     </div>
 
-
+    <!-- 單品主管系列 -->
     <div id="tab-premium" class="tab-content">
         <div class="product-grid">
             
@@ -947,7 +1016,7 @@
         </div>
     </div>
 
-    <!-- === 新增：懸浮在版面最底部的設計感資訊區塊 === -->
+    <!-- === 懸浮在版面最底部的設計感資訊區塊 === -->
     <div class="bottom-sticky-bar">
         <div class="sticky-bar-item">本產品已投保國泰產物保險產品責任險</div>
         <div class="sticky-bar-item">消費滿 1,000 元享免運費，未達門檻均收 100 元運費</div>
@@ -1035,7 +1104,7 @@
                 </table>
 
                 <div class="flavors-section">
-                    <h4 class="section-title">風味輪描述</h4>
+                    <h4 class="section-title">風味輪描述 / 組合內容</h4>
                     <div class="flavors-container" id="modalFlavors">
                     </div>
                 </div>
