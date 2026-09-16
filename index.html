@@ -614,14 +614,8 @@
         .filter-續航 { filter: brightness(0.7) sepia(0.15) contrast(1.1); }
         .filter-綜合 { filter: sepia(0.2) hue-rotate(20deg); }
 
-        .filter-羚羊 { filter: hue-rotate(320deg) saturate(1.3) brightness(0.95); }
         .filter-斑馬 { filter: hue-rotate(50deg) brightness(1.05) saturate(1.1); }
-        .filter-駝鹿 { filter: sepia(0.6) contrast(1.2) brightness(0.85); }
-        .filter-胡狼 { filter: hue-rotate(20deg) saturate(1.4) brightness(1); }
-        .filter-夜獅 { filter: hue-rotate(270deg) saturate(1.2) brightness(0.9); }
-        .filter-雲豹 { filter: hue-rotate(35deg) saturate(1.5) contrast(1.1); }
         .filter-露易莎莊園 { filter: hue-rotate(345deg) saturate(1.6) brightness(0.95); }
-        .filter-雲霧茉莉 { filter: hue-rotate(110deg) brightness(1.05) saturate(0.6); }
     </style>
 </head>
 <body>
@@ -637,81 +631,13 @@
 
     <div class="tabs-container">
         <div class="tabs-inner">
-            <button class="tab-button active" onclick="switchTab('tab-midautumn')">中秋禮盒組</button>
-            <button class="tab-button" onclick="switchTab('tab-drip')">經典專員系列</button>
+            <button class="tab-button active" onclick="switchTab('tab-drip')">經典專員系列</button>
             <button class="tab-button" onclick="switchTab('tab-premium')">單品主管系列</button>
         </div>
     </div>
 
-    <!-- 中秋禮盒組 (預設顯示第一個) -->
-    <div id="tab-midautumn" class="tab-content active">
-        <div class="product-grid">
-            
-            <!-- 列表資料一 -->
-            <div class="product-card" onclick="openProductModal('x01.png', '專員15入 經典濾掛咖啡禮盒組', 'Staff 15 Pack Gift Box', '經典專員系列陣容，精選多款風味。', '綜合烘焙', '精選產區綜合', '古優原生種/紅波旁等', '綜合處理法', ['靈感 x3', '正向 x3', '專注 x3', '放空 x3', '續航 x3'], ['禮盒優惠價：$450'], '')">
-                <div class="image-container">
-                    <span class="badge-roast">中秋限定</span>
-                    <img src="x01.png" class="product-img" alt="專員15入 經典濾掛咖啡禮盒組">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">中秋禮盒</span>
-                        <div class="product-title-row">
-                            <span class="product-name">專員15入 經典濾掛咖啡禮盒組</span>
-                        </div>
-                        <p class="product-slogan">內容物 : 靈感x3、正向x3、專注x3、放空x3、續航x3</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">售價 :</span> $450</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 列表資料二 -->
-            <div class="product-card" onclick="openProductModal('x02.png', '團隊18入 精選濾掛咖啡禮盒組', 'Team 18 Pack Gift Box', '主管與專員跨界盛宴，滿足團隊多元口滋。', '綜合烘焙', '精選產區綜合', '多款精選風味', '綜合處理法', ['總監 x2', '經理 x3', '主任 x3', '靈感 x2', '正向 x2', '專注 x2', '放空 x2', '續航 x2'], ['禮盒優惠價：$760'], '')">
-                <div class="image-container">
-                    <span class="badge-roast">中秋限定</span>
-                    <img src="x02.png" class="product-img" alt="團隊18入 精選濾掛咖啡禮盒組">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">中秋禮盒</span>
-                        <div class="product-title-row">
-                            <span class="product-name">團隊18入 精選濾掛咖啡禮盒組</span>
-                        </div>
-                        <p class="product-slogan">內容物 : 總監x2、經理x3、主任x3、靈感x2...</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">售價 :</span> $760</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 列表資料三 -->
-            <div class="product-card" onclick="openProductModal('x03.png', '高階24入 頂級濾掛咖啡禮盒組', 'Executive 24 Pack Gift Box', '單品主管頂級尊榮組合，極致層次體驗。', '精品烘焙', '單品精選產區', '頂級單品風味', '精選處理工藝', ['總監 x8', '經理 x8', '主任 x8'], ['禮盒優惠價：$1200'], '')">
-                <div class="image-container">
-                    <span class="badge-roast">中秋限定</span>
-                    <img src="x03.png" class="product-img" alt="高階24入 頂級濾掛咖啡禮盒組">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">中秋禮盒</span>
-                        <div class="product-title-row">
-                            <span class="product-name">高階24入 頂級濾掛咖啡禮盒組</span>
-                        </div>
-                        <p class="product-slogan">內容物 : 總監x8、經理x8、主任x8</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">售價 :</span> $1200</div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
     <!-- 經典專員系列 -->
-    <div id="tab-drip" class="tab-content">
+    <div id="tab-drip" class="tab-content active">
         <div class="product-grid">
             <div class="product-card" onclick="openProductModal('./001.png', '靈感', 'inspiration', '別問我，我只是一杯咖啡。', '淺焙', '衣索比亞 / 哥聯比亞', '古優原生種/帝比卡', '厭氧日曬 / 蜜處理', ['覆盆莓', '藍莓', '酒釀櫻桃', '柳橙'], ['濾掛體驗組 (5入)：$200', '濾掛分享組 (25入)：$750', '標準裝 (1磅)：$650', '家庭號 (2磅)：$1200'], 'filter-靈感')">
                 <div class="image-container">
@@ -845,27 +771,6 @@
     <div id="tab-premium" class="tab-content">
         <div class="product-grid">
             
-            <div class="product-card" onclick="openProductModal('011.jpg', '羚羊', 'Antelope', '來自衣索比亞耶加雪菲的極致單品，展現厭氧日曬的獨特風味。', '淺烘焙', '衣索比亞 / 耶加雪菲', 'Heirloom 古優原生種', '厭氧日曬', ['黑莓', '水果酒', '莓果', '醃梅子', '鳳梨'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-羚羊')">
-                <div class="image-container">
-                    <span class="badge-roast">淺烘焙</span>
-                    <img src="011.jpg" class="product-img" alt="羚羊">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">主任級</span>
-                        <div class="product-title-row">
-                            <span class="product-name">羚羊</span>
-                            <span class="product-english">Antelope</span>
-                        </div>
-                        <p class="product-slogan">風味：黑莓、水果酒、莓果、鳳梨</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">掛耳 :</span> 40(1入)</div>
-                        <div class="price-row"><span class="price-type">咖啡豆 :</span> 300(半磅) / 580(1磅)</div>
-                    </div>
-                </div>
-            </div>
-
             <div class="product-card" onclick="openProductModal('012.jpg', '斑馬', 'Zebra', '來自衣索比亞西達瑪的極致單品，展現水洗的獨特風味。', '淺烘焙', '衣索比亞 / 西達瑪', 'Heirloom 古優原生種', '水洗', ['柑橘', '紅莓果', '黃檸檬', '檸檬卡士達'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-斑馬')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
@@ -887,90 +792,6 @@
                 </div>
             </div>
 
-            <div class="product-card" onclick="openProductModal('013.jpg', '駝鹿', 'Moose', '來自哥倫比亞娜玲瓏省的極致單品，展現水洗的獨特風味。', '中烘焙', '哥倫比亞 / 娜玲瓏省', 'Caturra 卡杜拉', '水洗', ['烤堅果', '紅糖', '巧克力', '奶油', '烏龍茶'], ['單入體驗掛耳：$40', '精品半磅裝 (225g)：$300', '精品一磅裝 (455g)：$580'], 'filter-駝鹿')">
-                <div class="image-container">
-                    <span class="badge-roast">中烘焙</span>
-                    <img src="013.jpg" class="product-img" alt="駝鹿">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">主任級</span>
-                        <div class="product-title-row">
-                            <span class="product-name">駝鹿</span>
-                            <span class="product-english">Moose</span>
-                        </div>
-                        <p class="product-slogan">風味：烤堅果、紅糖、巧克力、奶油</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">掛耳 :</span> 40(1入)</div>
-                        <div class="price-row"><span class="price-type">咖啡豆 :</span> 300(半磅) / 580(1磅)</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card" onclick="openProductModal('014.jpg', '胡狼', 'Jackal', '來自衣索比亞古吉產區的極致單品，展現紅蜜處理法的獨特風味。', '淺烘焙', '衣索比亞 / 古吉產區', 'Heirloom 古優原生種', '紅蜜處理法', ['水蜜桃', '佛手柑', '蜂蜜', '荔枝軟糖'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-胡狼')">
-                <div class="image-container">
-                    <span class="badge-roast">淺烘焙</span>
-                    <img src="014.jpg" class="product-img" alt="胡狼">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">經理級</span>
-                        <div class="product-title-row">
-                            <span class="product-name">胡狼</span>
-                            <span class="product-english">Jackal</span>
-                        </div>
-                        <p class="product-slogan">風味：水蜜桃、佛手柑、蜂蜜</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">掛耳 :</span> 60(1入)</div>
-                        <div class="price-row"><span class="price-type">咖啡豆 :</span> 500(半磅) / 980(1磅)</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card" onclick="openProductModal('015.jpg', '夜獅', 'Night Lion', '來自衣索比亞古吉產區的極致單品，展現水洗處理法的獨特風味。', '淺烘焙', '衣索比亞 / 古吉產區', 'Heirloom 古優原生種', '水洗處理法', ['紫羅蘭', '莓果', '蔗糖', '桃子'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-夜獅')">
-                <div class="image-container">
-                    <span class="badge-roast">淺烘焙</span>
-                    <img src="015.jpg" class="product-img" alt="夜獅">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">經理級</span>
-                        <div class="product-title-row">
-                            <span class="product-name">夜獅</span>
-                            <span class="product-english">Night Lion</span>
-                        </div>
-                        <p class="product-slogan">風味：紫羅蘭、莓果、蔗糖、桃子</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">掛耳 :</span> 60(1入)</div>
-                        <div class="price-row"><span class="price-type">咖啡豆 :</span> 500(半磅) / 980(1磅)</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card" onclick="openProductModal('016.jpg', '雲豹', 'Clouded Leopard', '來自泰國清萊產區的極致單品，展現雙重厭氧蜜處理法的獨特風味。', '淺中烘焙', '泰國 / 清萊產區', 'Catimor 卡提摩', '雙重厭氧蜜處理法', ['泰奶', '椰子', '水蜜桃', '香料'], ['單入體驗掛耳：$60', '精品半磅裝 (225g)：$500', '精品一磅裝 (455g)：$980'], 'filter-雲豹')">
-                <div class="image-container">
-                    <span class="badge-roast">淺中烘焙</span>
-                    <img src="016.jpg" class="product-img" alt="雲豹">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">經理級</span>
-                        <div class="product-title-row">
-                            <span class="product-name">雲豹</span>
-                            <span class="product-english">Clouded Leopard</span>
-                        </div>
-                        <p class="product-slogan">風味：泰奶、椰子、水蜜桃、香料</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">掛耳 :</span> 60(1入)</div>
-                        <div class="price-row"><span class="price-type">咖啡豆 :</span> 500(半磅) / 980(1磅)</div>
-                    </div>
-                </div>
-            </div>
-
             <div class="product-card" onclick="openProductModal('017.jpg', '露易莎莊園', 'Louisa Estate', '來自哥倫比亞安蒂奧基亞省的極致單品，展現水果蜜處理的獨特風味。', '淺烘焙', '哥倫比亞 / 安蒂奧基亞省', 'Caturra 卡杜拉', '水果蜜處理', ['草莓果醬', '紅莓硬糖', '烤堅果', '紅茶'], ['單入體驗掛耳：$80', '精品半磅裝 (225g)：$700', '精品一磅裝 (455g)：$1380'], 'filter-露易莎莊園')">
                 <div class="image-container">
                     <span class="badge-roast">淺烘焙</span>
@@ -984,27 +805,6 @@
                             <span class="product-english">Louisa Estate</span>
                         </div>
                         <p class="product-slogan">風味：草莓果醬、紅莓硬糖、紅茶</p>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-row"><span class="price-type">掛耳 :</span> 80(1入)</div>
-                        <div class="price-row"><span class="price-type">咖啡豆 :</span> 700(半磅) / 1380(1磅)</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card" onclick="openProductModal('018.jpg', '雲霧茉莉', 'Cloud Jasmine', '來自哥倫比亞薇拉省的極致單品，展現厭氧水洗的獨特風味。', '淺烘焙', '哥倫比亞 / 薇拉省', 'Typica 鐵比卡', '厭氧水洗', ['茉莉花', '白毫銀針', '奶油香', '玉蘭花'], ['單入體驗掛耳：$80', '精品半磅裝 (225g)：$700', '精品一磅裝 (455g)：$1380'], 'filter-雲霧茉莉')">
-                <div class="image-container">
-                    <span class="badge-roast">淺烘焙</span>
-                    <img src="018.jpg" class="product-img" alt="雲霧茉莉">
-                </div>
-                <div class="product-info">
-                    <div class="product-info-top">
-                        <span class="product-level">總監級</span>
-                        <div class="product-title-row">
-                            <span class="product-name">雲霧茉莉</span>
-                            <span class="product-english">Cloud Jasmine</span>
-                        </div>
-                        <p class="product-slogan">風味：茉莉花、白毫銀針、玉蘭花</p>
                     </div>
                     <div class="product-footer">
                         <div class="price-row"><span class="price-type">掛耳 :</span> 80(1入)</div>
